@@ -1,0 +1,25 @@
+#  Rolling a Dice Problem
+#  Solved by Zach Hill aka stitcher-atx
+#  1/29/17 6:45 pm
+
+import random
+
+dice = random.randint(1,6)
+x = 1 #Right number to roll
+r = 1 #roll counter
+print("Roll until you get a 1!\n Press enter to start rolling: ")
+input()
+
+#loop testing
+while True:
+    print(dice)
+    if dice == x and r == 1:
+        print("It took you " + str(r) + " try to roll a 1.")
+        break
+    elif dice == x:
+        print("It took you " + str(r) + " tries to roll a 1.")
+        break
+    else:
+        r += 1
+        dice = random.randint(1, 6)
+
