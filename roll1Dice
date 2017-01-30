@@ -1,5 +1,5 @@
-#  Rolling a Dice Problem
-#  http://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/
+#  Rolling 1 dice until you hit the right number// a dice rolling simulator and number guessing simulator
+#  Inspired by: http://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/
 #  Solved by Zach Hill aka stitcher-atx
 #  1/29/17 6:45 pm
 
