@@ -1,0 +1,39 @@
+#  Rolling a Dice Problem
+#  Looped
+#  Solved by Zach Hill aka stitcher-atx
+#  1/30/17 8:20 pm
+
+import random
+
+dice = random.randint(1,6)
+x = 1 #Right number to roll
+r = 1 #roll counter
+print("Roll until you get a 1!\n Press enter to start rolling: ")
+input()
+
+
+def game(dice = dice,x = x,r =r):
+    while True:
+        print(dice)
+        if dice == x and r == 1:
+            print("It took you " + str(r) + " try to roll a " + str(x) + ".")
+            break
+        elif dice == x:
+            print("It took you " + str(r) + " tries to roll a " + str(x) + ".")
+            break
+        else:
+            r += 1
+            dice = random.randint(1, 6)
+    restart()
+
+def restart():
+    print("Play again?")
+    input()
+    x = random.randint(1,6)
+    print("New numbers is " + str(x) +  "!\n Press enter to start rolling:")
+    input()
+    game(dice = dice, x = x, r = 1)
+
+if __name__ =="__main__":
+    game()
+
