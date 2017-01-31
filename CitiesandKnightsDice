@@ -1,0 +1,29 @@
+#   Catan Cities & Knights Dice Simulator
+#   Three dice are rolled: 2 number dice and one event dice
+#   Solved by Zach Hill aka stitcher-atx
+#   1/30/17 10:12 pm
+
+import random
+
+x = 4 #players
+y = 0 #turn counter
+
+def roll_dice(x = x,y = y):
+    red = random.randint(1,6)
+    white = random.randint(1,6)
+    event = ("Raiders","Raiders","Raiders","Green Perk","Blue Perk","Yellow Perk")
+    z = random.choice(event)
+    print("White Dice:       " + str(white))
+    print("Red Dice:         " + str(red))
+    if x > y and z =="Raiders":
+        print("Event Dice:       No raiders this turn")
+    else:
+        print("Event Dice:       " + z)
+    print("Total roll is:    " + str(white + red))
+    y += 1
+    print("Turns so far: " + str(y))
+    input()
+    roll_dice(y = y, x = x)
+
+if __name__ =="__main__":
+    roll_dice()
