@@ -8,7 +8,7 @@ import random
 dice = random.randint(1,6)
 x = 1 #Right number to roll
 r = 1 #roll counter
-print("Roll until you get a 1!\n Press enter to start rolling: ")
+print("Roll until you get a 1!\nPress enter to start rolling: ")
 input()
 
 
@@ -30,7 +30,7 @@ def restart():
     print("Play again?")
     input()
     x = random.randint(1,6)
-    print("New numbers is " + str(x) +  "!\n Press enter to start rolling:")
+    print("New numbers is " + str(x) +  "!\nPress enter to start rolling:")
     input()
     game(dice = dice, x = x, r = 1)
 
