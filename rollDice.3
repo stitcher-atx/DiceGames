@@ -1,0 +1,48 @@
+#  Rolling a Dice Problem
+#  Looped
+#  Less recursive
+#  Solved by Zach Hill aka stitcher-atx
+#  2/2/17 9:47 pm
+
+import random
+
+dice = random.randint(1,6)
+x = 1 #Right number to roll
+r = 1 #roll counter
+
+def start():
+    print("ROLL UNTIL YOU GET THE NUMBER GAME!!!!")
+    print("Roll until you get a 1!")
+    input("Press enter to start rolling:")
+
+def game():
+    global dice, x, r
+    while True:
+        print(str(dice))
+        if dice == x and r == 1:
+            print("It took you " + str(r) + " try to roll a " + str(x) + ".\n")
+            break
+        elif dice == x:
+            print("It took you " + str(r) + " tries to roll a " + str(x) + ".\n")
+            break
+        else:
+            r += 1
+            dice = random.randint(1, 6)
+
+def restart():
+    global x, r
+    x = random.randint(1, 6)
+    r = 1
+    print("Play again?")
+    input("Press enter to start rolling:")
+    print("New numbers is " + str(x) + "!")
+    return x, r
+
+def main ():
+    game()
+    restart()
+
+if __name__ =="__main__":
+    start()
+    while True:
+        main()
