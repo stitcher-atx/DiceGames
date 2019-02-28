@@ -25,13 +25,11 @@ def roll():
     red.value = random.choice(red.sides)
     yellow.value = random.choice(yellow.sides)
     event.value = random.choice(event.faces)
-#    print (red.value,yellow.value,event.value)
     outcome = red.value + yellow.value
     if outcome == 7:
         print("A 7 was rolled. The robber moves!")
     else:
         print("The roll was {}.".format(outcome))
-
     return red.value, yellow.value, event.value
 
 def eventoutcome():
